@@ -1,0 +1,12 @@
+34.28.231.166
+3306
+tiny
+1234
+USE Project;
+CREATE TABLE student (studentId INT NOT NULL, studentName VARCHAR(45) NULL, State VARCHAR(45) NULL, Country VARCHAR(45) NULL, PRIMARY KEY (studentId), UNIQUE INDEX studentId_UNIQUE (studentId ASC) VISIBLE);
+INSERT INTO student (studentId, studentName, State, Country) VALUES (1, 'Tom B. Erichsen', 'California', 'USA');
+INSERT INTO student (studentId, studentName, State, Country) VALUES (2, 'B. Jackson', 'California', 'USA');
+INSERT INTO student (studentId, studentName, State, Country) VALUES (3, 'M. Paris', 'Texas', 'USA');
+SELECT * FROM student;
+SELECT * FROM student WHERE State = 'California';
+
