@@ -113,13 +113,17 @@ public class RemoteDBConnection {
             this.connection = connect();
         }
         try {
+            this.connection.setAutoCommit(false);
             Statement statement = this.connection.createStatement();
             int status = statement.executeUpdate(query);
+            this.connection.commit();
             if(status >= 0){
                 System.out.println("Executing query is successful " + query);
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+        }finally {
+            this.connection.setAutoCommit(true);
         }
 
     }
