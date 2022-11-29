@@ -1,0 +1,11 @@
+Connecting to MySql
+Connection to SqlServer is  successful
+Executing query is successful USE Project;
+Executing query is successful CREATE TABLE IF NOT exists report(`County Code` VARCHAR(255), `Tract Code` VARCHAR(255), `Tract Income Level` VARCHAR(255), `Distressed or Under -served Tract` VARCHAR(255), `Tract Median Family Income %` FLOAT, `2011 HUD Est. MSA/MD non-MSA/MD Median Family Income` FLOAT, `2011 Est. Tract Median Family Income` FLOAT, `2000 Tract Median Family Income` FLOAT, `Tract Population` INTEGER, `Tract Minority %` FLOAT, `Minority Population` INTEGER, `Owner Occupied Units` INTEGER, `1- to 4- Family Units` INTEGER);
+Executing select query select count(1) where exists (select * from report)
+Executing select query select Avg(`2011 Est. Tract Median Family Income`) as `Avarage of median family income`, Avg(`2000 Tract Median Family Income`) as `Avarage of median family income 2000`, sum(`Tract Population`), sum(`Minority Population`), sum(`Owner Occupied Units`)  from report;
+Printing 1 row from table 
+| Avarage of median family income | Avarage of median family income 2000 | sum(`Tract Population`) | sum(`Minority Population`) | sum(`Owner Occupied Units`) |
+|                          48.163 |                               37.310 |              112249.000 |                  24651.000 |                   32845.000 |
++---------------------------------+--------------------------------------+-------------------------+----------------------------+-----------------------------+
+
