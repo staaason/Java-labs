@@ -1,0 +1,8 @@
+34.28.231.166
+3306
+bob
+password
+Use Project;
+DROP TABLE student;
+SELECT * FROM report;
+SELECT * FROM student;
